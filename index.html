@@ -11,18 +11,24 @@
 <body>
 
     Hello
-    <a ui-sref="dashboard">Hello</a>
+    <a ui-sref="dashboard">Dashboard</a>
+    <a ui-sref="messages">Message List</a>
     <ui-view></ui-view>
 
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
 
     <script src="/app/app.module.js"></script>
+
     <script src="/app/core/core.module.js"></script>
     <script src="/app/core/config.js"></script>
 
     <script src="/app/dashboard/dashboard.module.js"></script>
     <script src="/app/dashboard/dashboard.component.js"></script>
+    <script src="/app/messages/message-list.module.js"></script>
+    <script src="/app/messages/message-list.component.js"></script>
+    <script src="/app/messages/message-detail.module.js"></script>
+    <script src="/app/messages/message-detail.component.js"></script>
 </body>
 
 </html>
