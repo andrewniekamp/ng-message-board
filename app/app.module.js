@@ -7,7 +7,9 @@
 
         // Feature modules
         'app.dashboard', // Includes dashboard component
-        'app.messageList'
+        'app.messageList',
+        'app.messageDetail',
+        'app.messageFactory'
         // 'app.layout'
     ]);
 }());

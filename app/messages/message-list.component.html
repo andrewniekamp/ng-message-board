@@ -1,1 +1,10 @@
 <p>Message-list component</p>
+
+<p>This will list message items</p>
+<ul>
+    <li ng-repeat="message in vm.messages">
+        <a ui-sref="messageDetail({ messageId: message.messageId })">
+            Message {{message.messageId}}
+        </a>
+    </li>
+</ul>
