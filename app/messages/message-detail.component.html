@@ -1,7 +1,24 @@
+<p>Message-detail component for message {{ vm.message.messageId }}</p>
+<p>{{ vm.message.content }}</p>
+<hr>
+<h3>Check out other messages...</h3>
 <select ng-model="vm.logOption">
     <option ng-repeat="item in vm.options" value="{{item}}">{{item}}</option>
 </select>
-<p>Message-detail component for message {{ vm.message.messageId }}</p>
-<p>{{ vm.message.content }}</p>
 <h1 ng-show="vm.logOption === 'Meta'">THAT'S SO META!</h1>
 <h1 ng-if="vm.logOption === 'Detail'">So detail oriented!!</h1>
+<table>
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Title</td>
+            <td>Content</td>
+        </tr>
+    </thead>
+    <tbody ng-repeat="message in vm.messages | filter: { type: vm.logOption }">
+        <tr>
+            <td>{{message.messageId}}</td>
+            <td>{{message.content}}</td>
+        </tr>
+    </tbody>
+</table>
