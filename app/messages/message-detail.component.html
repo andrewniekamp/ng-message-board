@@ -1,7 +1,7 @@
-<select ng-model="selectToggle">
+<select ng-model="vm.logOption">
     <option ng-repeat="item in vm.options" value="{{item}}">{{item}}</option>
 </select>
 <p>Message-detail component for message {{ vm.message.messageId }}</p>
 <p>{{ vm.message.content }}</p>
-<h1 ng-show="selectToggle === 'Meta'">THAT'S SO META!</h1>
-<h1 ng-if="selectToggle === 'Detail'">So detail oriented!!</h1>
+<h1 ng-show="vm.logOption === 'Meta'">THAT'S SO META!</h1>
+<h1 ng-if="vm.logOption === 'Detail'">So detail oriented!!</h1>
