@@ -8,5 +8,8 @@
         },
         templateUrl: '/app/messages/message-detail.component.html',
         controllerAs: 'vm',
+        controller: function() {
+            this.options = ['Meta', 'Detail'];
+        }
     });
 }());
